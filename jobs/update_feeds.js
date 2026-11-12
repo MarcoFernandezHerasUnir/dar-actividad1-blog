@@ -9,9 +9,10 @@ const parser = new Parser({
 
 const RSS_FEEDS = [
   { name: "INCIBE-CERT Avisos", url: "https://www.incibe.es/incibe-cert/alerta-temprana/avisos/feed" },
+  { name: "INCIBE-Ciudadania", url: "https://www.incibe.es/ciudadania/avisos/feed" },
   { name: "Una al Día (Hispasec)", url: "https://unaaldia.hispasec.com/feed/" },
-  { name: "We Live Security ES", url: "https://www.welivesecurity.com/es/feed/" },
-  { name: "Un informático en el lado del mal", url: "https://www.elladodelmal.com/feeds/posts/default" }
+  { name: "Un informático en el lado del mal", url: "https://www.elladodelmal.com/feeds/posts/default" },
+  { name: "Cyberhades", url: "https://cyberhades.com/index.xml" }
 ];
 
 async function updateFeeds() {

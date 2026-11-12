@@ -1,0 +1,35 @@
+name: Actualizar Feeds RSS (JS)
+
+on:
+  schedule:
+    - cron: '0 */6 * * *'
+  workflow_dispatch:
+
+jobs:
+  build:
+    permissions:
+      contents: write
+
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Clonar repositorio
+        uses: actions/checkout@v4
+
+      - name: Configurar Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+
+      - name: Instalar dependencias
+        run: npm ci
+
+      - name: Ejecutar script de actualización
+        run: node jobs/update_feeds.js
+
+      - name: Autocommit del JSON actualizado
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: "Auto-actualización del archivo feeds.json (JS) [skip ci]"
+          file_pattern: "feeds.json"
