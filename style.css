@@ -1,0 +1,67 @@
+:root {
+  --bs-body-bg: #121212;
+  --bs-body-color: #e0e0e0;
+}
+body {
+  font-family: "Inter", sans-serif;
+  background-color: #121212;
+  color: #e0e0e0;
+}
+/* Navbar estilizada con efecto blur */
+.navbar-dark-custom {
+  background-color: rgba(18, 18, 18, 0.85) !important;
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+/* Tarjetas con estilo oscuro  */
+.card-dark-custom {
+  background-color: #1e1e1e;
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  transition:
+    transform 0.2s ease,
+    border-color 0.2s ease;
+}
+/* Animación de la card al pasar el cursor por encima */
+.card-dark-custom:hover {
+  transform: translateY(-4px);
+  border-color: rgba(99, 102, 241, 0.4);
+}
+/* Botones de acento violeta/neón suave */
+.btn-glow {
+  background: linear-gradient(135deg, #6366f1 0%, #4f46e5 100%);
+  border: none;
+  color: #ffffff;
+  box-shadow: 0 4px 14px rgba(99, 102, 241, 0.35);
+  transition: all 0.2s ease;
+}
+.btn-glow:hover {
+  background: linear-gradient(135deg, #4f46e5 0%, #4338ca 100%);
+  color: #ffffff;
+  box-shadow: 0 6px 20px rgba(99, 102, 241, 0.5);
+  transform: translateY(-1px);
+}
+.badge-tech {
+  background-color: rgba(99, 102, 241, 0.15);
+  color: #818cf8;
+  border: 1px solid rgba(99, 102, 241, 0.3);
+}
+
+/* Fondo gradiente de la seccion principal de morado arriba la derecha a cyan abajo a la izquierda */
+.hero-section {
+  background:
+    radial-gradient(
+      circle at 80% 20%,
+      rgba(99, 102, 241, 0.12) 0%,
+      transparent 40%
+    ),
+    radial-gradient(
+      circle at 10% 80%,
+      rgba(14, 165, 233, 0.08) 0%,
+      transparent 40%
+    );
+}
+
+footer {
+  background-color: #0d0d0d;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
