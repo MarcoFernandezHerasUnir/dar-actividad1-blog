@@ -43,19 +43,19 @@
             <div class="row align-items-center g-4">
                 <div class="col-lg-7">
                     <span class="badge badge-tech px-3 py-2 rounded-pill mb-3 fw-medium">
-                        <i class="bi bi-journal-text me-1"></i> <span>Listado de noticias a 16/11/2026 18:00</span>
+                        <i class="bi bi-journal-text me-1"></i> <span>Listado de noticias a <span id="last-update-hdr"></span></span>
                     </span>
                     <h1 class="display-5 fw-bold text-white mb-2">Noticias</h1>
                     <p class="mb-0">Explora las últimas noticias sobre Cyber Seguridad</p>
                 </div>
-                <div class="col-lg-5">
+                <!-- <div class="col-lg-5">
                     <div class="position-relative">
                         <span class="position-absolute top-50 start-0 translate-middle-y ps-3">
                             <i class="bi bi-search"></i>
                         </span>
                         <input type="text" id="searchInput" class="form-control search-box-custom rounded-pill ps-5 py-3" placeholder="Buscar por título, tecnología o tema...">
                     </div>
-                </div>
+                </div> -->
             </div>
 
             <!-- TODO ¿añadir otros filtros? -->
@@ -63,116 +63,35 @@
     </header>
 
     <!-- Cuadrícula de Artículos y Noticias -->
-    <main class="py-5 my-5">
+    <main class="py-2 my-2">
+        <div class="d-none">
+                <!-- Post template -->
+                <div class="col-lg-4 col-md-6" id="post-template">
+                    <div class="card card-dark-custom h-100 rounded-4 overflow-hidden">
+                        <div class="bg-secondary bg-opacity-10 p-5 text-center position-relative">
+                            <i class="bi bi-file-earmark-code fs-1 text-secondary opacity-50"></i>
+                            <span class="position-absolute top-0 start-0 m-3 badge badge-tech" id="post-origin">Origen</span>
+                        </div>
+                        <div class="card-body p-4 d-flex flex-column">
+                            <div class="small mb-2"><i class="bi bi-calendar3 me-1"></i> <span id="post-date">12 de Noviembre, 2026</span></div>
+                            <h3 class="h5 fw-bold text-white mb-3" id="post-title">Lorem ipsum dolor sit amet consectetur, adipisicing elit.</h3>
+                            <p class="small mb-4" id="post-description">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Amet porro sunt odio cum obcaecati doloribus quidem hic cupiditate eaque nisi recusandae quibusdam nulla dolore eveniet fuga deleniti, dolorum quae natus!</p>
+                            <div class="mt-auto">
+                                <a href="#" class="text-decoration-none fw-medium small d-inline-flex align-items-center gap-1" style="color: #818cf8;" id="post-link">
+                                    Leer artículo completo <i class="bi bi-arrow-right"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         <div class="container py-3">
-            <div class="row g-4 justify-content-center" id="articlesGrid">
-
-                <!-- Artículo 1 -->
-                <div class="col-lg-4 col-md-6">
-                    <div class="card card-dark-custom h-100 rounded-4 overflow-hidden">
-                        <div class="bg-secondary bg-opacity-10 p-5 text-center position-relative">
-                            <i class="bi bi-file-earmark-code fs-1 text-secondary opacity-50"></i>
-                            <span class="position-absolute top-0 start-0 m-3 badge badge-tech">Origen</span>
-                        </div>
-                        <div class="card-body p-4 d-flex flex-column">
-                            <div class="small mb-2"><i class="bi bi-calendar3 me-1"></i> 12 de Noviembre, 2026</div>
-                            <h3 class="h5 fw-bold text-white mb-3">Lorem ipsum dolor sit amet consectetur, adipisicing elit.</h3>
-                            <p class="small mb-4">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Amet porro sunt odio cum obcaecati doloribus quidem hic cupiditate eaque nisi recusandae quibusdam nulla dolore eveniet fuga deleniti, dolorum quae natus!</p>
-                            
-                            <div class="mt-auto">
-                                <a href="#" class="text-decoration-none fw-medium small d-inline-flex align-items-center gap-1" style="color: #818cf8;">
-                                    Leer artículo completo <i class="bi bi-arrow-right"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>     
-                
-                <!-- Artículo 2 -->
-                <div class="col-lg-4 col-md-6">
-                    <div class="card card-dark-custom h-100 rounded-4 overflow-hidden">
-                        <div class="bg-secondary bg-opacity-10 p-5 text-center position-relative">
-                            <i class="bi bi-file-earmark-code fs-1 text-secondary opacity-50"></i>
-                            <span class="position-absolute top-0 start-0 m-3 badge badge-tech">Origen</span>
-                        </div>
-                        <div class="card-body p-4 d-flex flex-column">
-                            <div class="small mb-2"><i class="bi bi-calendar3 me-1"></i> 12 de Noviembre, 2026</div>
-                            <h3 class="h5 fw-bold text-white mb-3">Lorem ipsum dolor sit amet consectetur, adipisicing elit.</h3>
-                            <p class="small mb-4">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Amet porro sunt odio cum obcaecati doloribus quidem hic cupiditate eaque nisi recusandae quibusdam nulla dolore eveniet fuga deleniti, dolorum quae natus!</p>
-                            <div class="mt-auto">
-                                <a href="#" class="text-decoration-none fw-medium small d-inline-flex align-items-center gap-1" style="color: #818cf8;">
-                                    Leer artículo completo <i class="bi bi-arrow-right"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>  
-                
-                <!-- Artículo 3 -->
-                <div class="col-lg-4 col-md-6">
-                    <div class="card card-dark-custom h-100 rounded-4 overflow-hidden">
-                        <div class="bg-secondary bg-opacity-10 p-5 text-center position-relative">
-                            <i class="bi bi-file-earmark-code fs-1 text-secondary opacity-50"></i>
-                            <span class="position-absolute top-0 start-0 m-3 badge badge-tech">Origen</span>
-                        </div>
-                        <div class="card-body p-4 d-flex flex-column">
-                            <div class="small mb-2"><i class="bi bi-calendar3 me-1"></i> 12 de Noviembre, 2026</div>
-                            <h3 class="h5 fw-bold text-white mb-3">Lorem ipsum dolor sit amet consectetur, adipisicing elit.</h3>
-                            <p class="small mb-4">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Amet porro sunt odio cum obcaecati doloribus quidem hic cupiditate eaque nisi recusandae quibusdam nulla dolore eveniet fuga deleniti, dolorum quae natus!</p>
-                            <div class="mt-auto">
-                                <a href="#" class="text-decoration-none fw-medium small d-inline-flex align-items-center gap-1" style="color: #818cf8;">
-                                    Leer artículo completo <i class="bi bi-arrow-right"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>      
-
-                <!-- Artículo 4 -->
-                <div class="col-lg-4 col-md-6">
-                    <div class="card card-dark-custom h-100 rounded-4 overflow-hidden">
-                        <div class="bg-secondary bg-opacity-10 p-5 text-center position-relative">
-                            <i class="bi bi-file-earmark-code fs-1 text-secondary opacity-50"></i>
-                            <span class="position-absolute top-0 start-0 m-3 badge badge-tech">Origen</span>
-                        </div>
-                        <div class="card-body p-4 d-flex flex-column">
-                            <div class="small mb-2"><i class="bi bi-calendar3 me-1"></i> 12 de Noviembre, 2026</div>
-                            <h3 class="h5 fw-bold text-white mb-3">Lorem ipsum dolor sit amet consectetur, adipisicing elit.</h3>
-                            <p class="small mb-4">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Amet porro sunt odio cum obcaecati doloribus quidem hic cupiditate eaque nisi recusandae quibusdam nulla dolore eveniet fuga deleniti, dolorum quae natus!</p>
-                            <div class="mt-auto">
-                                <a href="#" class="text-decoration-none fw-medium small d-inline-flex align-items-center gap-1" style="color: #818cf8;">
-                                    Leer artículo completo <i class="bi bi-arrow-right"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>      
-
-                <!-- Artículo 5 -->
-                <div class="col-lg-4 col-md-6">
-                    <div class="card card-dark-custom h-100 rounded-4 overflow-hidden">
-                        <div class="bg-secondary bg-opacity-10 p-5 text-center position-relative">
-                            <i class="bi bi-file-earmark-code fs-1 text-secondary opacity-50"></i>
-                            <span class="position-absolute top-0 start-0 m-3 badge badge-tech">Origen</span>
-                        </div>
-                        <div class="card-body p-4 d-flex flex-column">
-                            <div class="small mb-2"><i class="bi bi-calendar3 me-1"></i> 12 de Noviembre, 2026</div>
-                            <h3 class="h5 fw-bold text-white mb-3">Lorem ipsum dolor sit amet consectetur, adipisicing elit.</h3>
-                            <p class="small mb-4">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Amet porro sunt odio cum obcaecati doloribus quidem hic cupiditate eaque nisi recusandae quibusdam nulla dolore eveniet fuga deleniti, dolorum quae natus!</p>
-                            <div class="mt-auto">
-                                <a href="#" class="text-decoration-none fw-medium small d-inline-flex align-items-center gap-1" style="color: #818cf8;">
-                                    Leer artículo completo <i class="bi bi-arrow-right"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>      
-
+            <div class="row g-4 justify-content-center" id="articlesGrid" data-post-number="9">
             </div>
 
             <!-- Paginación -->
             <nav class="mt-5" aria-label="Navegación de páginas">
-                <ul class="pagination justify-content-center">
+                <ul class="pagination justify-content-center" id="pagination">
                     <li class="page-item disabled">
                         <a class="page-link" href="#" tabindex="-1" aria-disabled="true">Anterior</a>
                     </li>
@@ -210,7 +129,7 @@
                     <h5 class="h6 fw-bold text-white mb-3">Estado</h5>
                     <div class="d-flex align-items-center gap-2 bg-dark p-2 rounded-3 border border-secondary border-opacity-25">
                         <span class="d-inline-block rounded-circle bg-success"style="width: 8px; height: 8px;"></span>
-                        <span class="text-light small">Ultima actualización: <span class="text-light small">12/11/2026 18:26</span></span>                        
+                        <span class="text-light small">Ultima actualización: <span class="text-light small" id="last-update">12/11/2026 18:26</span></span>                        
                     </div>
                 </div>
             </div>
@@ -221,5 +140,7 @@
     <!-- Inclusión de javascript -->
     <!-- Bootstrap 5 JS Bundle CDN -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script src="./listado-articulos.js"></script>
 </body>
 </html>
