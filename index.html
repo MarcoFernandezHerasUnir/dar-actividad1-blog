@@ -76,64 +76,31 @@
                     Ver todos los artículos <i class="bi bi-arrow-right"></i>
                 </a>
             </div>
-            <div class="row g-4">
-                <!-- Post 1 -->
-                <div class="col-lg-4 col-md-6">
+
+            <div class="d-none">
+                <!-- Post template -->
+                <div class="col-lg-4 col-md-6" id="post-template">
                     <div class="card card-dark-custom h-100 rounded-4 overflow-hidden">
                         <div class="bg-secondary bg-opacity-10 p-5 text-center position-relative">
                             <i class="bi bi-file-earmark-code fs-1 text-secondary opacity-50"></i>
-                            <span class="position-absolute top-0 start-0 m-3 badge badge-tech">Origen</span>
+                            <span class="position-absolute top-0 start-0 m-3 badge badge-tech" id="post-origin">Origen</span>
                         </div>
                         <div class="card-body p-4 d-flex flex-column">
-                            <div class="small mb-2"><i class="bi bi-calendar3 me-1"></i> 12 de Noviembre, 2026</div>
-                            <h3 class="h5 fw-bold text-white mb-3">Lorem ipsum dolor sit amet consectetur, adipisicing elit.</h3>
-                            <p class="small mb-4">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Amet porro sunt odio cum obcaecati doloribus quidem hic cupiditate eaque nisi recusandae quibusdam nulla dolore eveniet fuga deleniti, dolorum quae natus!</p>
+                            <div class="small mb-2"><i class="bi bi-calendar3 me-1"></i> <span id="post-date">12 de Noviembre, 2026</span></div>
+                            <h3 class="h5 fw-bold text-white mb-3" id="post-title">Lorem ipsum dolor sit amet consectetur, adipisicing elit.</h3>
+                            <p class="small mb-4" id="post-description">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Amet porro sunt odio cum obcaecati doloribus quidem hic cupiditate eaque nisi recusandae quibusdam nulla dolore eveniet fuga deleniti, dolorum quae natus!</p>
                             <div class="mt-auto">
-                                <a href="#" class="text-decoration-none fw-medium small d-inline-flex align-items-center gap-1" style="color: #818cf8;">
+                                <a href="#" class="text-decoration-none fw-medium small d-inline-flex align-items-center gap-1" style="color: #818cf8;" id="post-link">
                                     Leer artículo completo <i class="bi bi-arrow-right"></i>
                                 </a>
                             </div>
                         </div>
                     </div>
                 </div>
-                <!-- Post 2 -->
-                <div class="col-lg-4 col-md-6">
-                    <div class="card card-dark-custom h-100 rounded-4 overflow-hidden">
-                        <div class="bg-secondary bg-opacity-10 p-5 text-center position-relative">
-                            <i class="bi bi-display fs-1 text-secondary opacity-50"></i>
-                            <span class="position-absolute top-0 start-0 m-3 badge badge-tech">Origen</span>
-                        </div>
-                        <div class="card-body p-4 d-flex flex-column">
-                            <div class="small mb-2"><i class="bi bi-calendar3 me-1"></i> 8 de Noviembre, 2026</div>
-                            <h3 class="h5 fw-bold text-white mb-3">Lorem ipsum dolor sit amet consectetur, adipisicing elit.</h3>
-                            <p class="small mb-4">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Amet porro sunt odio cum obcaecati doloribus quidem hic cupiditate eaque nisi recusandae quibusdam nulla dolore eveniet fuga deleniti, dolorum quae natus!</p>
-                            <div class="mt-auto">
-                                <a href="#" class="text-decoration-none fw-medium small d-inline-flex align-items-center gap-1" style="color: #818cf8;">
-                                    Leer artículo completo <i class="bi bi-arrow-right"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- Post 3 -->
-                <div class="col-lg-4 col-md-6">
-                    <div class="card card-dark-custom h-100 rounded-4 overflow-hidden">
-                        <div class="bg-secondary bg-opacity-10 p-5 text-center position-relative">
-                            <i class="bi bi-journal-bookmark fs-1 text-secondary opacity-50"></i>
-                            <span class="position-absolute top-0 start-0 m-3 badge badge-tech">Origen</span>
-                        </div>
-                        <div class="card-body p-4 d-flex flex-column">
-                            <div class="small mb-2"><i class="bi bi-calendar3 me-1"></i> 3 de Noviembre, 2026</div>
-                            <h3 class="h5 fw-bold text-white mb-3">Lorem ipsum dolor sit amet consectetur, adipisicing elit.</h3>
-                            <p class="small mb-4">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Amet porro sunt odio cum obcaecati doloribus quidem hic cupiditate eaque nisi recusandae quibusdam nulla dolore eveniet fuga deleniti, dolorum quae natus!</p>
-                            <div class="mt-auto">
-                                <a href="#" class="text-decoration-none fw-medium small d-inline-flex align-items-center gap-1" style="color: #818cf8;">
-                                    Leer artículo completo <i class="bi bi-arrow-right"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+            </div>
+
+            <div class="row g-4" id="post-container" data-post-number="3">
+                
             </div>
         </div>
     </section>
@@ -161,7 +128,7 @@
                     <h5 class="h6 fw-bold text-white mb-3">Estado</h5>
                     <div class="d-flex align-items-center gap-2 bg-dark p-2 rounded-3 border border-secondary border-opacity-25">
                         <span class="d-inline-block rounded-circle bg-success"style="width: 8px; height: 8px;"></span>
-                        <span class="text-light small">Ultima actualización: <span class="text-light small">12/11/2026 18:26</span></span>                        
+                        <span class="text-light small">Ultima actualización: <span class="text-light small" id="last-update"></span></span>                        
                     </div>
                 </div>
             </div>
@@ -172,5 +139,7 @@
     <!-- Inclusión de javascript -->
     <!-- Bootstrap 5 JS Bundle CDN -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script src="./index.js"></script>
 </body>
 </html>
