@@ -37,20 +37,27 @@
         </div>
     </nav>
 
-        <!-- 2. Cabecera del Artículo -->
+    <!-- 2. Cabecera del Artículo -->
     <header class="article-header-bg pt-5 mt-5 pb-4 border-bottom border-dark">
         <div class="container py-4">
             <div class="row justify-content-center">
                 <div class="col-lg-8">
                     <div class="d-flex flex-wrap align-items-center gap-3 mb-3">
                         <span class="badge badge-tech px-3 py-2 rounded-pill fw-medium">
-                            <i class="bi bi-tag-fill me-1"></i> <span>Origen</span>
+                            <i class="bi bi-tag-fill me-1"></i> <span id="origin">Origen</span>
                         </span>
-                        <span class=" small"><i class="bi bi-calendar3 me-1"></i> 14 Nov 2026</span>
+                        <span class=" small"><i class="bi bi-calendar3 me-1"></i> <span id="post-date"> Nov 2026</span></span>
                     </div>
 
                     <!-- Título Principal -->
-                    <h1 class="display-5 fw-bold text-white mb-4 lh-sm">Lorem, ipsum dolor sit amet consectetur adipisicing elit.</h1>
+                    <h1 class="display-5 fw-bold text-white mb-4 lh-sm" id="post-title">Lorem, ipsum dolor sit amet consectetur adipisicing elit.</h1>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <a href="#" target="_blank" id="post-original-link" class="text-decoration-none text-light small fw-medium mt-3 mt-md-0 d-flex align-items-center gap-1 hover-link">
+                    Leer original <i class="bi bi-arrow-right"></i>
+                </a>
                 </div>
             </div>
         </div>
@@ -61,9 +68,8 @@
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-lg-8">
-
                     <!-- Cuerpo del Artículo -->
-                    <article class="lh-lg fs-6">
+                    <article class="lh-lg fs-6" id="post-body">
                         <p class="lead text-light mb-4">
                         Lorem, ipsum dolor sit amet consectetur adipisicing elit. Unde voluptatibus, consectetur perspiciatis maiores, at ducimus impedit error soluta expedita repudiandae odio! Ipsam, consequuntur nostrum. Dicta nesciunt eius alias eaque consequatur.    
                         </p>
@@ -110,7 +116,7 @@
                     <h5 class="h6 fw-bold text-white mb-3">Estado</h5>
                     <div class="d-flex align-items-center gap-2 bg-dark p-2 rounded-3 border border-secondary border-opacity-25">
                         <span class="d-inline-block rounded-circle bg-success"style="width: 8px; height: 8px;"></span>
-                        <span class="text-light small">Ultima actualización: <span class="text-light small">12/11/2026 18:26</span></span>                        
+                        <span class="text-light small">Ultima actualización: <span class="text-light small" id="last-update">12/11/2026 18:26</span></span>                        
                     </div>
                 </div>
             </div>
@@ -121,5 +127,7 @@
     <!-- Inclusión de javascript -->
     <!-- Bootstrap 5 JS Bundle CDN -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script src="./detalle-articulo.js"></script>
 </body>
 </html>
