@@ -14,7 +14,7 @@ function formatDate(d){
 
 function addPost(post, index, template, container)
 {
-    console.info(post)
+    //console.info(post)
 
     //Clonamos el nodo template y todos sus hijos
     const clone = template.cloneNode(true);
@@ -55,7 +55,7 @@ window.onload = function() {
     fetch('./feeds.json')
         .then(response => response.json())
         .then(data => {
-            console.info(data);
+            //console.info(data);
 
             //Establecer fecha última actualización
             lastUpdate.innerHTML = formatDate(data.updated_at)
