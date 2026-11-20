@@ -6,3 +6,6 @@ node_modules/
 Thumbs.db
 .vscode/
 .idea/
+
+# Memoria convertida a PDF
+MEMORIA.pdf
